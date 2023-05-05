@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>cockies</title>
+  </head>
+  <body onLoad="affiche();">
+    <h1>Liste de taches</h1>
+    <div id="heure">heure</div>
+    <div class="container">
+      <table class="big-table">
+        <tr>
+          <td class="td1-1">Ajouter une tache</td>
+          <td class="td1-2">Liste des taches actives</td>
+        </tr>
+        <tr>
+          <td class="td2-1" rowspan="2">
+            <div>
+              <input class="inputs" type="text" id="Designation" />
+              <label class="label">Designation</label>
+              <input class="inputs" type="number" id="Expiration" min="0" />
+              <label class="label">Expiration "Seconds"</label>
+              <label>Priorite</label>
+              <select name="priorite" id="Priorite">
+                <option value="">--Please choose an option--</option>
+                <option value="Faible">Faible</option>
+                <option value="Moyenne">Moyenne</option>
+                <option value="Elevee">Elevee</option>
+              </select><br>
+              <button onclick="data()">ajouter</button>
+            </div>
+          </td>
+          <td class="td2-2">
+            <table class="small-table" id="small-table">
+              <tr>
+                <td>Designation</td>
+                <td>Heure<br />Creation</td>
+                <td>Priorite</td>
+                <td>Duree</td>
+              </tr>
+            </table>
+            <table class="small-table2" id="small-table2">
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+          </td>
+        </tr>
+        <tr>
+          <td id="tach-nbr" class="td3-2">Nombre de Tache 0</td>
+        </tr>
+      </table>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
